@@ -1,0 +1,115 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="faac_0M5BRHSWwGdjb-D">
+    <mxGraphModel dx="2015" dy="1836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UGf45qa_oSPUfh_RxV93-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;i&gt;Membership&lt;/i&gt;" vertex="1">
+          <mxGeometry height="242" width="435" x="207.5" y="-30" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-2" parent="UGf45qa_oSPUfh_RxV93-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- memberName: String" vertex="1">
+          <mxGeometry height="26" width="435" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-17" parent="UGf45qa_oSPUfh_RxV93-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- months: int" vertex="1">
+          <mxGeometry height="26" width="435" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-18" parent="UGf45qa_oSPUfh_RxV93-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- baseRate: BigDecimal" vertex="1">
+          <mxGeometry height="26" width="435" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-3" parent="UGf45qa_oSPUfh_RxV93-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="8" width="435" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-4" parent="UGf45qa_oSPUfh_RxV93-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Membership(membershipName: String, months: int, baseRate: BigDecimal)" vertex="1">
+          <mxGeometry height="26" width="435" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-20" parent="UGf45qa_oSPUfh_RxV93-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontStyle=2" value="+ getMonthlyPrice(): BigDecimal" vertex="1">
+          <mxGeometry height="26" width="435" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-23" parent="UGf45qa_oSPUfh_RxV93-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;getSignUpFee(): BigDecimal" vertex="1">
+          <mxGeometry height="26" width="435" y="164" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-24" parent="UGf45qa_oSPUfh_RxV93-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+&amp;nbsp;getContractTotal(): BigDecimal&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="26" width="435" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-27" parent="UGf45qa_oSPUfh_RxV93-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ toString(): String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="26" width="435" y="216" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="BasicMembership" vertex="1">
+          <mxGeometry height="151" width="310" x="-100" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-6" parent="UGf45qa_oSPUfh_RxV93-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- offPeakOnly: boolean" vertex="1">
+          <mxGeometry height="26" width="310" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-7" parent="UGf45qa_oSPUfh_RxV93-5" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="8" width="310" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-8" parent="UGf45qa_oSPUfh_RxV93-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ BasicMembership(membershipName: String, months: int, baseRate: BigDecimal, offPeakOnly: boolean)" vertex="1">
+          <mxGeometry height="39" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-21" parent="UGf45qa_oSPUfh_RxV93-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getMonthlyPrice(): BigDecimal" vertex="1">
+          <mxGeometry height="26" width="310" y="99" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-28" parent="UGf45qa_oSPUfh_RxV93-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ toString(): String" vertex="1">
+          <mxGeometry height="26" width="310" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-9" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="PremiumMembership" vertex="1">
+          <mxGeometry height="177" width="310" x="270" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-10" parent="UGf45qa_oSPUfh_RxV93-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- guestPasses: int" vertex="1">
+          <mxGeometry height="26" width="310" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-11" parent="UGf45qa_oSPUfh_RxV93-9" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="8" width="310" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-12" parent="UGf45qa_oSPUfh_RxV93-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ PremiumMembership(membershipName: String, months: int, baseRate: BigDecimal, guestPasses: int)" vertex="1">
+          <mxGeometry height="39" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-22" parent="UGf45qa_oSPUfh_RxV93-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ useGuestPass(): void" vertex="1">
+          <mxGeometry height="26" width="310" y="99" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-25" parent="UGf45qa_oSPUfh_RxV93-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getSignUpFee(): BigDecimal" vertex="1">
+          <mxGeometry height="26" width="310" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-29" parent="UGf45qa_oSPUfh_RxV93-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ toString(): String" vertex="1">
+          <mxGeometry height="26" width="310" y="151" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-13" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="FamilyMembership" vertex="1">
+          <mxGeometry height="126" width="310" x="640" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-14" parent="UGf45qa_oSPUfh_RxV93-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ extraMembers: int" vertex="1">
+          <mxGeometry height="26" width="310" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-15" parent="UGf45qa_oSPUfh_RxV93-13" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="8" width="310" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-16" parent="UGf45qa_oSPUfh_RxV93-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ FamilyMembership(membershipName: String, months: int, baseRate: BigDecimal, extraMembers: int)" vertex="1">
+          <mxGeometry height="40" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-30" parent="UGf45qa_oSPUfh_RxV93-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ toString(): String" vertex="1">
+          <mxGeometry height="26" width="310" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-38" edge="1" parent="1" source="UGf45qa_oSPUfh_RxV93-5" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;fontSize=8;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="UGf45qa_oSPUfh_RxV93-1" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
+          <mxGeometry relative="1" width="160" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="47.25" y="330.003" as="sourcePoint" />
+            <mxPoint x="490" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-40" edge="1" parent="1" source="UGf45qa_oSPUfh_RxV93-9" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;fontSize=8;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="UGf45qa_oSPUfh_RxV93-1" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
+          <mxGeometry relative="1" width="160" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="310" y="388" as="sourcePoint" />
+            <mxPoint x="680" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UGf45qa_oSPUfh_RxV93-41" edge="1" parent="1" source="UGf45qa_oSPUfh_RxV93-13" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;fontSize=8;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="UGf45qa_oSPUfh_RxV93-1" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
+          <mxGeometry relative="1" width="160" x="-0.2671" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="430" y="368" as="sourcePoint" />
+            <mxPoint x="430" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
