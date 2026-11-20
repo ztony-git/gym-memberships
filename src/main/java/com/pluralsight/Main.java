@@ -12,7 +12,8 @@ public class Main {
         PremiumMembership carolWhite = new PremiumMembership("Carol White", 12, new BigDecimal("30.00"), 2);
         PremiumMembership frankMiller = new PremiumMembership("Frank Miller", 3, new BigDecimal("30.00"), 0);
         FamilyMembership graceLee = new FamilyMembership("Grace Lee", 12, new BigDecimal("30.00"), 3);
-        FamilyMembership emmaWatson =  new FamilyMembership("Emma Watson", 6, new BigDecimal("30.00"), 1);
+        FamilyMembership emmaWatson = new FamilyMembership("Emma Watson", 6, new BigDecimal("30.00"), 1);
+        CorporateMembership oliviaMartin = new CorporateMembership("Olivia Martin", 12, new BigDecimal("30.00"), new BigDecimal("0.40"));
 
         ArrayList<Membership> memberships = new ArrayList<>();
 //        memberships.add(henryClark);
@@ -22,6 +23,7 @@ public class Main {
         memberships.add(frankMiller);
         memberships.add(graceLee);
         memberships.add(emmaWatson);
+        memberships.add(oliviaMartin);
 
         System.out.println("=== Gym Memberships ===");
         BigDecimal monthlyIncome = BigDecimal.ZERO;
