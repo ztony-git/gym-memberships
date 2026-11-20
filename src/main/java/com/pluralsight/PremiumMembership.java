@@ -15,6 +15,11 @@ public class PremiumMembership extends Membership {
         return getBaseRate().add(new BigDecimal("18.50"));
     }
 
+    @Override
+    public BigDecimal getSignUpFee() {
+        return getMonths() >= 12 ? new BigDecimal("0.00") : super.getSignUpFee();
+    }
+
     public void useGuestPass() {
         if (guestPasses <= 0) {
             System.out.printf("%s has no guest passes left%n", getMemberName());

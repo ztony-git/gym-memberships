@@ -27,5 +27,17 @@ public class Main {
         carolWhite.useGuestPass();
         carolWhite.useGuestPass();
         frankMiller.useGuestPass();
+
+
+        System.out.println("--- Sign-up fee and contract total ---");
+        /*
+        Carol White & Grace Lee have differing answers due to inheritance and method overwriting. PremiumMembership overwrites
+        the getSignUpFee() method, where contracts > 12 months have no sign up fee. Since this is overwritten, when calling the
+        getContractTotal() method of the PremiumClass, it will use its own getSignUpFee() rather than the parents.
+         */
+        System.out.printf("%s: fee $%.2f, total $%.2f%n", henryClark.getMemberName(), henryClark.getSignUpFee(), henryClark.getContractTotal());
+        System.out.printf("%s: fee $%.2f, total $%.2f%n", carolWhite.getMemberName(), carolWhite.getSignUpFee(), carolWhite.getContractTotal());
+        System.out.printf("%s: fee $%.2f, total $%.2f%n", frankMiller.getMemberName(), frankMiller.getSignUpFee(), frankMiller.getContractTotal());
+        System.out.printf("%s: fee $%.2f, total $%.2f%n", graceLee.getMemberName(), graceLee.getSignUpFee(), graceLee.getContractTotal());
     }
 }
