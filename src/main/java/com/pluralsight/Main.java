@@ -29,17 +29,26 @@ public class Main {
         BigDecimal monthlyIncome = BigDecimal.ZERO;
         BigDecimal allContracts =  BigDecimal.ZERO;
 
+        Membership biggestMembership = null;
+        BigDecimal biggestContract = BigDecimal.ZERO;
+
         for (Membership membership : memberships) {
             System.out.println(membership);
             printCosts(membership);
             monthlyIncome = monthlyIncome.add(membership.getMonthlyPrice());
             allContracts = allContracts.add(membership.getContractTotal());
+
+            if(membership.getContractTotal().compareTo(biggestContract) > 0) {
+                biggestMembership = membership;
+                biggestContract = membership.getContractTotal();
+            }
         }
 
         System.out.println("--- Totals ---");
         System.out.println("Memberships: " + memberships.size());
         System.out.printf("Monthly Income: $%.2f%n", monthlyIncome);
         System.out.printf("All Contracts: $%.2f%n", allContracts);
+        System.out.printf("Largest Contract: %s, $%.2f%n", biggestMembership.getMemberName(), biggestMembership.getContractTotal());
 
         System.out.println("--- Front desk notes ---");
         for (Membership membership : memberships) {
