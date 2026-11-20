@@ -50,6 +50,11 @@ public class Main {
                 System.out.printf("%s: prints %d key cards%n", membership.getMemberName(), ((FamilyMembership) membership).getExtraMembers() + 1);
             }
         }
+
+        System.out.println("--- Kinds ---");
+        for (Membership membership : memberships) {
+            System.out.printf("%s: %s%n", membership.getMemberName(), membership.getClass().getSimpleName());
+        }
     }
     public static void printCosts(Membership membership) {
         System.out.printf("\tMonthly Price: $%.2f, sign-up fee: $%.2f, contract total: $%.2f%n", membership.getMonthlyPrice(), membership.getSignUpFee(), membership.getContractTotal());
