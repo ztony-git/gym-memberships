@@ -13,7 +13,7 @@ A console app that tracks and calculates the price of gym memberships.
 
 <!-- Three to five sentences. What the application does, who uses it, what problem it solves.
      Write it for someone who has never seen the workbook: a recruiter, a classmate, you in six months. -->
-
+A project that demonstrates inheritance, abstraction, and clean code through the presentation of a Gym Membership program. Details gym memberships in as little code as possible through inheritance, heterogeneous lists, and loops. Checks what classes a Membership is and prints it out.  
 ## Class Diagram
 
 <!-- OPTIONAL. Only when the project asks for one (Capstone 2 onward). Export the diagram as a PNG into the
@@ -31,18 +31,9 @@ A console app that tracks and calculates the price of gym memberships.
      - Shows every product in the store
      - Searches products by name (bonus) -->
 
--
--
--
-
-## User Stories
-
-<!-- The stories you worked from, one per bullet, in the format you learned in Workbook 3b:
-     As a [type of user], I want [some goal] so that [some reason].
-     Same text as the cards on your GitHub project board. -->
-
-- As a ..., I want ..., so that ...
-- As a ..., I want ..., so that ...
+- Parent Class Membership handles most methods and attributes.
+- Child Classes only implement their own methods and attributes when needed.
+  - Loops and prints out membership information in the membership list.
 
 ## Setup
 
@@ -56,19 +47,9 @@ A console app that tracks and calculates the price of gym memberships.
 1. Clone this repository, or download it as a zip and unzip it.
 2. In IntelliJ: File > Open, pick the project folder (the one that holds `pom.xml`), press Open.
 3. Wait for IntelliJ to finish indexing (progress bar at the bottom).
-4. Open `src/main/java/com/pluralsight/YourMainClassName.java`. <!-- replace YourMainClassName with the class that has main -->
-5. Right-click inside the file and choose Run 'YourMainClassName.main()'.
+4. Open `src/main/java/com/pluralsight/Main.java`. <!-- replace YourMainClassName with the class that has main -->
+5. Right-click inside the file and choose Run 'Main.main()'.
 
-### Data and configuration
-
-<!-- OPTIONAL. Anything the program needs that is not code: data files and where they must sit, files the
-     program creates, a database script to run first, a settings file to edit (connection, port).
-     If there is nothing, delete this subsection, heading included.
-     Example:
-     - `inventory.csv` sits at the project root, next to `pom.xml`. The program reads it at start.
-     - `logs.txt` is created by the program at the project root on the first run. -->
-
--
 
 ## Technologies Used
 
@@ -93,8 +74,6 @@ A console app that tracks and calculates the price of gym memberships.
 
 ![Main menu](images/menu.png)
 
-![One feature in action](images/feature.png)
-
 ## A piece of code I am proud of
 
 <!-- Paste one short block of your own code (5 to 15 lines) between the three backticks, then write two
@@ -102,31 +81,41 @@ A console app that tracks and calculates the price of gym memberships.
      demo day and what you talk about in an interview. -->
 
 ```java
-
+for (Membership membership : memberships) {
+    if (membership instanceof BasicMembership) {
+        if (((BasicMembership) membership).isOffPeakOnly()) {
+            System.out.printf("%s: entry between 10:00 and 16:00 only%n", membership.getMemberName());
+        }
+    } else if (membership instanceof PremiumMembership) {
+        ((PremiumMembership) membership).useGuestPass();
+    } else if (membership instanceof FamilyMembership) {
+        System.out.printf("%s: prints %d key cards%n", membership.getMemberName(), ((FamilyMembership) membership).getExtraMembers() + 1);
+    }
+}
 ```
+This code loops through the memberships array and checks the class of the membership, printing a message depending on the class. It downcasts without having to create another variable.
 
 ## Future Work
 
 <!-- What you would add or fix next, one bullet each. Unfinished bonuses belong here. -->
 
--
--
+- Interfaces
+- Helper classes
 
 ## Resources
 
 <!-- What helped you: the workbook, the week's hub pages, a tutorial, a documentation page. Real links. -->
 
 - Java YearUp Fall 2026 hub: <https://raymaroun.github.io/yearup-java-fall2026/>
--
 
 ## Author
 
 <!-- Your name and, if you like, your GitHub profile link. For a team workshop, one line per person with what each one built. -->
 
-- **Your Name**
+- **Tony Zhang**
 
 ## Thanks
 
 <!-- Optional. The people who helped: the instructor, a classmate who debugged with you, a mentor. -->
 
-- Thank you to ... for ...
+- Thank you to Raymond for your guidance
