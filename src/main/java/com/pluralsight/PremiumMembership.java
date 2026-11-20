@@ -1,0 +1,26 @@
+package com.pluralsight;
+
+import java.math.BigDecimal;
+
+public class PremiumMembership extends Membership {
+    private int guestPasses;
+
+    public PremiumMembership(String memberName, int months, BigDecimal baseRate, int guestPasses) {
+        super(memberName, months, baseRate);
+        this.guestPasses = guestPasses;
+    }
+
+    @Override
+    public BigDecimal getMonthlyPrice() {
+        return getBaseRate().add(new BigDecimal("18.50"));
+    }
+
+    public void useGuestPass() {
+        if (guestPasses <= 0) {
+            System.out.printf("%s has no guest passes left%n", getMemberName());
+            return;
+        }
+
+        System.out.printf("%s used a guest pass. Passes left: %d%n", getMemberName(), --guestPasses);
+    }
+}
