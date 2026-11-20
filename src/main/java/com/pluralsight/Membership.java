@@ -48,4 +48,9 @@ public class Membership {
     public BigDecimal getContractTotal() {
         return getMonthlyPrice().multiply(BigDecimal.valueOf(months)).add(getSignUpFee());
     }
+
+    @Override
+    public String toString() {
+        return String.format("Membership | %s | %d months",  memberName, months);
+    }
 }

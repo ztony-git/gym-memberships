@@ -14,4 +14,9 @@ public class BasicMembership extends Membership{
     public BigDecimal getMonthlyPrice() {
         return offPeakOnly ? getBaseRate().subtract(new BigDecimal("5.00")) : getBaseRate();
     }
+
+    @Override
+    public String toString() {
+        return String.format("Basic | %s | %d months | off-peak only: %s",  getMemberName(), getMonths(), offPeakOnly);
+    }
 }

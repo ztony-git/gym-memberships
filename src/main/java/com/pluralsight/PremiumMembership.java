@@ -28,4 +28,9 @@ public class PremiumMembership extends Membership {
 
         System.out.printf("%s used a guest pass. Passes left: %d%n", getMemberName(), --guestPasses);
     }
+
+    @Override
+    public String toString() {
+        return String.format("Premium | %s | %d months | guest passes: %d",  getMemberName(), getMonths(), guestPasses);
+    }
 }

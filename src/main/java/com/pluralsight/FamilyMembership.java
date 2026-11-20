@@ -16,4 +16,9 @@ public class FamilyMembership extends Membership{
 
         return extraMembers >= 3 ? familyBaseRate.multiply(new BigDecimal("0.9")) : familyBaseRate;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Family | %s | %d months | extra members: %d",  getMemberName(), getMonths(), extraMembers);
+    }
 }
