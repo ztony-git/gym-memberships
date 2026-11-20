@@ -5,16 +5,17 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Membership henryClark = new Membership("Henry Clark", 3, new BigDecimal("30.00"));
-        Membership aliceJohnson = new BasicMembership("Alice Johnson", 6, new BigDecimal("30.00"), true);
-        Membership bobSmith = new BasicMembership("Bob Smith", 2, new BigDecimal("27.50"), false);
+        //'Membership' is abstract; cannot be instantiated
+//        Membership henryClark = new Membership("Henry Clark", 3, new BigDecimal("30.00"));
+        BasicMembership aliceJohnson = new BasicMembership("Alice Johnson", 6, new BigDecimal("30.00"), true);
+        BasicMembership bobSmith = new BasicMembership("Bob Smith", 2, new BigDecimal("27.50"), false);
         PremiumMembership carolWhite = new PremiumMembership("Carol White", 12, new BigDecimal("30.00"), 2);
         PremiumMembership frankMiller = new PremiumMembership("Frank Miller", 3, new BigDecimal("30.00"), 0);
         FamilyMembership graceLee = new FamilyMembership("Grace Lee", 12, new BigDecimal("30.00"), 3);
         FamilyMembership emmaWatson =  new FamilyMembership("Emma Watson", 6, new BigDecimal("30.00"), 1);
 
         ArrayList<Membership> memberships = new ArrayList<>();
-        memberships.add(henryClark);
+//        memberships.add(henryClark);
         memberships.add(aliceJohnson);
         memberships.add(bobSmith);
         memberships.add(carolWhite);
