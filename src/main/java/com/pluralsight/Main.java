@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,32 +13,32 @@ public class Main {
         FamilyMembership graceLee = new FamilyMembership("Grace Lee", 12, new BigDecimal("30.00"), 3);
         FamilyMembership emmaWatson =  new FamilyMembership("Emma Watson", 6, new BigDecimal("30.00"), 1);
 
+        ArrayList<Membership> memberships = new ArrayList<>();
+        memberships.add(henryClark);
+        memberships.add(aliceJohnson);
+        memberships.add(bobSmith);
+        memberships.add(carolWhite);
+        memberships.add(frankMiller);
+        memberships.add(graceLee);
+        memberships.add(emmaWatson);
 
         System.out.println("=== Gym Memberships ===");
-        System.out.println(henryClark);
-        System.out.println(aliceJohnson);
-        System.out.println(bobSmith);
-        System.out.println(carolWhite);
-        System.out.println(frankMiller);
-        System.out.println(graceLee);
-        System.out.println(emmaWatson);
+        BigDecimal monthlyIncome = BigDecimal.ZERO;
+        BigDecimal allContracts =  BigDecimal.ZERO;
 
-        System.out.println("--- Guest passes ---");
-        carolWhite.useGuestPass();
-        carolWhite.useGuestPass();
-        carolWhite.useGuestPass();
-        frankMiller.useGuestPass();
+        for (Membership membership : memberships) {
+            System.out.println(membership);
+            printCosts(membership);
+            monthlyIncome = monthlyIncome.add(membership.getMonthlyPrice());
+            allContracts = allContracts.add(membership.getContractTotal());
+        }
 
-
-        System.out.println("--- Sign-up fee and contract total ---");
-        /*
-        Carol White & Grace Lee have differing answers due to inheritance and method overwriting. PremiumMembership overwrites
-        the getSignUpFee() method, where contracts > 12 months have no sign up fee. Since this is overwritten, when calling the
-        getContractTotal() method of the PremiumClass, it will use its own getSignUpFee() rather than the parents.
-         */
-        System.out.printf("%s: fee $%.2f, total $%.2f%n", henryClark.getMemberName(), henryClark.getSignUpFee(), henryClark.getContractTotal());
-        System.out.printf("%s: fee $%.2f, total $%.2f%n", carolWhite.getMemberName(), carolWhite.getSignUpFee(), carolWhite.getContractTotal());
-        System.out.printf("%s: fee $%.2f, total $%.2f%n", frankMiller.getMemberName(), frankMiller.getSignUpFee(), frankMiller.getContractTotal());
-        System.out.printf("%s: fee $%.2f, total $%.2f%n", graceLee.getMemberName(), graceLee.getSignUpFee(), graceLee.getContractTotal());
+        System.out.println("--- Totals ---");
+        System.out.println("Memberships: " + memberships.size());
+        System.out.printf("Monthly Income: $%.2f%n", monthlyIncome);
+        System.out.printf("All Contracts: $%.2f%n", allContracts);
+    }
+    public static void printCosts(Membership membership) {
+        System.out.printf("\tMonthly Price: $%.2f, sign-up fee: $%.2f, contract total: $%.2f%n", membership.getMonthlyPrice(), membership.getSignUpFee(), membership.getContractTotal());
     }
 }
