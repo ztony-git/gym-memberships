@@ -10,6 +10,14 @@ public class FamilyMembership extends Membership{
         this.extraMembers = extraMembers;
     }
 
+    public int getExtraMembers() {
+        return extraMembers;
+    }
+
+    public void setExtraMembers(int extraMembers) {
+        this.extraMembers = extraMembers;
+    }
+
     @Override
     public BigDecimal getMonthlyPrice() {
         BigDecimal familyBaseRate = getBaseRate().add(new BigDecimal("12.50").multiply(BigDecimal.valueOf(extraMembers)));

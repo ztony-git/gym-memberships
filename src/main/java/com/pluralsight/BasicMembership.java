@@ -10,6 +10,14 @@ public class BasicMembership extends Membership{
         this.offPeakOnly = offPeakOnly;
     }
 
+    public boolean isOffPeakOnly() {
+        return offPeakOnly;
+    }
+
+    public void setOffPeakOnly(boolean offPeakOnly) {
+        this.offPeakOnly = offPeakOnly;
+    }
+
     @Override
     public BigDecimal getMonthlyPrice() {
         return offPeakOnly ? getBaseRate().subtract(new BigDecimal("5.00")) : getBaseRate();
