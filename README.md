@@ -1,4 +1,4 @@
-# Project Title
+# Gym Memberships
 
 <!-- HOW TO USE THIS TEMPLATE
      Save it as README.md at the root of your project, next to pom.xml. Replace every comment like this one
@@ -8,7 +8,7 @@
 
 <!-- One sentence under the title: what the app is, for whom.
      Example: A console app that keeps a store's inventory in a csv file and lets a clerk search it. -->
-
+A console app that tracks and calculates the price of gym memberships.
 ## Description of the Project
 
 <!-- Three to five sentences. What the application does, who uses it, what problem it solves.
